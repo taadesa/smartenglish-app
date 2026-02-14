@@ -1,25 +1,20 @@
-{
-  "name": "smartenglish",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#0d7ff2",
+        "background-light": "#f5f7f8",
+        "background-dark": "#101922",
+      },
+      fontFamily: {
+        "display": ["Lexend", "system-ui", "sans-serif"]
+      },
+    },
   },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^4.3.0",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.0",
-    "typescript": "~5.6.0",
-    "vite": "^6.0.0"
-  }
+  plugins: [],
 }
